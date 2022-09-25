@@ -1,7 +1,0 @@
-{"response":[{"id":33065131,"first_name":"Наиль","last_name":"Алишев","hidden":1}]}
-----------------------------------------------------------------------
-{"eror":{"error_code":5,"error_msg":"User authorization failed: no access_token passed.","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"users.get"},{"key":"user_ids","value":"33064131"},{"key":"v","value":"5.8"}]}}
-----------------------------------------------------------------------
-все в вк настройках редактирование приложения
-c7efabefc7efabefc7efabef60c4ff7b7ccc7efc7efabefa4c1118bfdf3ac46bb4d9a99(Сервисный ключ доступа)
-9qxDE3xkDyQ9LW49DQlW(Защищённый ключ)
