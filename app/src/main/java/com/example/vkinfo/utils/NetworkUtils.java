@@ -20,11 +20,11 @@ public class NetworkUtils {
     private static final String PARAM_USER_ID = "user_ids";
     private static final String PARAM_VERSION = "v";
     private static final String ACCESS_TOKEN="access_token";
-    public static URL generateURL(String userId) {
+    public static URL generateURL(String userIds) {
         //url улица пушкина
         Uri builUri = Uri.parse(VK_API_BASE_URL + VK_USERS_GET)
                 .buildUpon()
-                .appendQueryParameter(PARAM_USER_ID, userId)
+                .appendQueryParameter(PARAM_USER_ID, userIds)
                 .appendQueryParameter(PARAM_VERSION, "5.81")
                 .appendQueryParameter(ACCESS_TOKEN,"c7efabefc7efabefc7efabef60c4ff7b7ccc7efc7efabefa4c1118bfdf3ac46bb4d9a99")
                 .build();

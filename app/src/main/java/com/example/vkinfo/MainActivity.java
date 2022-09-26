@@ -62,15 +62,37 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     JSONArray jsonArray = jsonResponse.getJSONArray("response");
+                    /*1
                     JSONObject userInfo = jsonArray.getJSONObject(0);
-
-                    firstName = userInfo.getString("first_name");
+                    это мы коминтим т.к
+                    мы меняем на несколько пользователей(делаем не на 1 запрос а на несколько)
+                     */
+                    String resultingString = "";
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject userInfo = jsonArray.getJSONObject(i);
+                        firstName = userInfo.getString("first_name");
+                        lastName = userInfo.getString("last_name");
+                        resultingString += "Имя : "
+                                + firstName
+                                + "\n" + "Фамилия : "
+                                + lastName
+                                + "\n\n";
+                    }
+                    /*1
+                     firstName = userInfo.getString("first_name");
                     lastName = userInfo.getString("last_name");
+                     */
+                    result.setText(resultingString);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                /*1
                 String resultingString = "Имя : " + firstName + "\n" + "Фамилия : " + lastName;
+                 */
+                /*1
                 result.setText(resultingString);
+                 */
+
                 showResultTextView();
             } else {
                 showErrorTextView();
